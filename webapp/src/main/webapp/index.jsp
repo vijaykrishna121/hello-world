@@ -1,2 +1,2 @@
-<h1> Hello, Welcome to India !nd AP!! </h1>
+<h1> Hello, Welcome to AP!! </h1>
 
