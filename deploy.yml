@@ -5,6 +5,6 @@
   
   tasks:
    ansible.builtin.copy:
-    src: /webapp/target/webapp.war
+    src: webapp/target/*.war
     dest: /opt/tomcat/webapps
    
