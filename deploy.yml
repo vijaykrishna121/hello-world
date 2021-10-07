@@ -1,0 +1,10 @@
+---
+- name: copy build file
+  hosts: all
+  become: true
+  
+  tasks:
+   ansible.builtin.copy:
+    src: /webapp/target/webapp.war
+    dest: /opt/tomcat/webapps
+   
