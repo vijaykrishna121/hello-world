@@ -8,8 +8,7 @@
     find:
       paths: /opt
       patterns: "startup.sh"
-      register: files_matched
-     
+      register: files_matched 
   - name: Getting process IDs of the process
     community.general.pids:
       name: tomcat
