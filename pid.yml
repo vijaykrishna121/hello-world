@@ -1,0 +1,16 @@
+---
+- name: pid of tomcat
+  hosts: all
+  become: true
+  
+  tasks:
+  - name: Ansible find file examples
+    find:
+      paths: /opt
+      patterns: "startup.sh"
+      register: files_matched
+     
+  - name: Getting process IDs of the process
+    community.general.pids:
+      name: tomcat
+      register: tomcat_pids
