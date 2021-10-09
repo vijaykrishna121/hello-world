@@ -15,7 +15,7 @@
   - name: unarchive package
     ansible.builtin.unarchive:
       src: /opt/apache-tomcat-9.0.54.tar.gz
-      dest: /opt/apache-tomcat-9.0.54
+      dest: /opt/
       remote_src: yes
   - name: remove a file
     ansible.builtin.file: 
