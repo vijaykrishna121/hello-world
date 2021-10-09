@@ -9,3 +9,5 @@
       paths: /opt
       patterns: "startup.sh"
       register: files_matched 
+  - debug:
+      msg: "{{ files_matched.files }}"
