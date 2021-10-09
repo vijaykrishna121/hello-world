@@ -9,6 +9,3 @@
       paths: /opt
       patterns: "startup.sh"
       register: files_matched 
-  - name: Getting process IDs of the process
-    community.general.pids:
-      msg: "PIDS of tomcat:{{pids_of_tomcat.pids|join(',')}}"
