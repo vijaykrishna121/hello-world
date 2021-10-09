@@ -4,7 +4,12 @@
   become: true
   
   tasks:
-   ansible.builtin.copy:
-    src: 'webapp/target/*.war'
-    dest: /opt/tomcat/webapps
+  - name: install java
+    yum:
+      name: java
+      state: latest
+  - name: build war
+    ansible.builtin.copy:
+      src: webapp/target/*.war
+      dest: /opt/tomcat/webapps
    
