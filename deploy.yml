@@ -12,4 +12,5 @@
     ansible.builtin.copy:
       src: webapp/target/*.war
       dest: /opt/tomcat/webapps
+      remote_src: yes
    
