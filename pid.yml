@@ -13,4 +13,4 @@
   - name: Getting process IDs of the process
     community.general.pids:
       name: tomcat
-      register: tomcat_pids
+    register: tomcat_pids
