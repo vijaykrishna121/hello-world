@@ -7,7 +7,6 @@
   - name: Ansible find file examples
     find:
       paths: /opt
-      patterns: "startup.sh"
+      contains: "startup.sh"
       register: files_matched 
-  - debug:
-      msg: "{{ files_matched.files }}"
+  
