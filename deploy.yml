@@ -10,6 +10,6 @@
       state: latest
   - name: build war
     ansible.builtin.copy:
-      src: /var/lib/jenkins/workspace/pipeline_job/webapp/target/*.war
+      src: /var/lib/jenkins/workspace/pipeline_job/webapp/target/webapp.war
       dest: /opt/tomcat/webapps
       remote_src: yes
