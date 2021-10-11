@@ -20,7 +20,7 @@
   - name: copying the war file
     ansible.builtin.copy: 
       src: ./webapp/target/webapp.war
-      dest: /opt/tomcat/webapps
+      dest: /opt/apache-tomcat-9.0.54/webapps
   - name: starting the service
     ansible.builtin.shell: nohup /opt/tomcat/bin/startup.sh
       
