@@ -1,0 +1,27 @@
+---
+- name: tomcat install and deploy war file
+  hosts: all
+  become: true
+  
+  tasks:
+  - name: java install
+    yum:
+      name: java
+    state: latest
+  - name: download tomcat
+    get_url:
+      url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz
+      dest: /opt/
+  - name: extract file
+    ansible.builtin.unarchive:
+      src: /opt/apache-tomcat-9.0.54.tar.gz
+      dest: /opt/
+  - name: renaming the folder
+    ansible.builtin.shell: mv /opt/apache-tomcat-9.0.54.tar.gz /opt/tomcat
+  - name: copying the war file
+    ansible.builtin.copy: 
+      src: ./webapp/target/*.war
+      dest: /opt/tomcat/webapps
+  - name: starting the service
+    ansible.builtin.shell: nohup /opt/tomcat/bin/startup.sh
+      
