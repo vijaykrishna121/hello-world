@@ -16,6 +16,7 @@
     ansible.builtin.unarchive:
       src: /opt/apache-tomcat-9.0.54.tar.gz
       dest: /opt/
+      remote_src: yes
   - name: renaming the folder
     ansible.builtin.shell: mv /opt/apache-tomcat-9.0.54.tar.gz /opt/tomcat
   - name: copying the war file
