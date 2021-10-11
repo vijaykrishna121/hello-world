@@ -17,6 +17,8 @@
       src: /opt/apache-tomcat-9.0.54.tar.gz
       dest: /opt/
       remote_src: yes
+  - name: rename the folder
+    ansible.builtin.shel: "mv -R /opt/apache-tomcat-9.0.54 /opt/tomcat"
   - name: copying the war file
     ansible.builtin.copy: 
       src: ./webapp/target/webapp.war
