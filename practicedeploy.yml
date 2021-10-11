@@ -7,7 +7,7 @@
   - name: java install
     yum:
       name: java
-    state: latest
+      state: latest
   - name: download tomcat
     get_url:
       url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz
