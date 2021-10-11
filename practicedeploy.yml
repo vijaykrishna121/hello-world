@@ -22,5 +22,5 @@
       src: ./webapp/target/webapp.war
       dest: /opt/apache-tomcat-9.0.54/webapps
   - name: starting the service
-    ansible.builtin.shell: nohup /opt/tomcat/bin/startup.sh
+    ansible.builtin.shell: nohup /opt/apache-tomcat-9.0.54/bin/startup.sh
       
