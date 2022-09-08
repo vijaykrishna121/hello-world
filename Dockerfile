@@ -3,4 +3,4 @@ From tomcat:8-jre8
 
 # Maintainer 
 MAINTAINER "vijay" 
-COPY docker/webapp/target/*.war /usr/local/tomcat/webapps/webapp.war
+COPY /var/lib/jenkins/workspace/docker/webapp/target/webapp.war /usr/local/tomcat/webapps
